@@ -15,3 +15,20 @@
 - [❗Baixar MT Manager](https://www.mediafire.com/file/0vm0v0qcfvjq2u6/MT+Manager_2.10.4-beta.apk/file)
 
 - [❗Baixar Acode Pro](https://www.mediafire.com/file/39o3dijk4tqyk2f/Acode_base.apk/file)
+
+# Comandos para instalar o bot!
+
+```
+pkg upgrade -y
+pkg update -y
+termux-setup-storage
+pkg install nodejs -y
+pkg install nodejs-lts -y
+pkg install git -y
+pkg install ffmpeg -y
+
+cd /sdcard
+git clone https://github.com/JG-Bots/fastbot-md
+cd fastbot-md
+sh start.sh
+```
