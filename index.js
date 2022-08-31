@@ -1,23 +1,20 @@
 /*
 Deixe os Creditos to de olho. 🤨🧐
+
+Meu canal: [
+
+Nome: JG-Bots
+Link: https://youtube.com/channel/UC6Nvd3QgM0j1_ebNF4OC84g
+
+]
+
+Se Pegar os cmd deixe os creditos pq os comandos sao meus se for mandar o bot mande o link do canal!
 */
 
 // 𝐀𝐮𝐠𝐮𝐦𝐚𝐬 𝐅𝐮𝐧𝐜𝐨𝐞𝐬
 
 const {
 default: makeWASocket, downloadContentFromMessage, emitGroupParticipantsUpdate, emitGroupUpdate, downloadAndSaveMediaMessage, prepareWAMessageMedia, MediaType, generateWAMessageFromContent, WAMessageStatus,AuthenticationState, GroupMetadata,initInMemoryKeyStore, MiscMessageGenerationOptions, useSingleFileAuthState, BufferJSON, WAMessageProto, MessageOptions, WAFlag, WANode, WAMetric, ChatModification, MessageTypeProto, WALocationMessage,ReconnectMode, WAContextInfo, proto, WAGroupMetadata, ProxyAgent, waChatKey, MimetypeMap, MediaPathMap, WAContactMessage, WAContactsArrayMessage, WAGroupInviteMessage, WATextMessage, WAMessageContent, WAMessage, BaileysError, WA_MESSAGE_STATUS_TYPE, MediaConnInfo, URL_REGEX, WAUrlInfo, WA_DEFAULT_EPHEMERAL, WAMediaUpload, mentionedJid, processTime,	Browser, MessageType, Presence, WA_MESSAGE_STUB_TYPES, Mimetype, relayWAMessage, Browsers, GroupSettingChange, delay, DisconnectReason, WASocket, getStream, WAProto, isBaileys, AnyMessageContent } = require('@adiwajshing/baileys');
-
-// 𝐏𝐢𝐧𝐠 𝐃𝐨 𝐁𝐨𝐭
-
-function kyun(seconds){
-function pad(s){
-return (s < 10 ? '0' : '') + s;
-}
-var hours = Math.floor(seconds / (60*60));
-var minutes = Math.floor(seconds % (60*60) / 60);
-var seconds = Math.floor(seconds % 60);
-return `${pad(hours)} Horas ${pad(minutes)} Minutos ${pad(seconds)} Segundos`
-}
 
 // 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧
 
@@ -44,6 +41,7 @@ const googleImage = require('g-i-s');
 const googleIt = require('google-it');
 const moment = require('moment-timezone');
 const time = moment.tz('America/Sao_Paulo').format('HH:mm:ss');
+const speed = require('performance-now');
 
 // 𝐀𝐫𝐪𝐮𝐢𝐯𝐨𝐬 𝐋𝐢𝐛
 
@@ -72,6 +70,18 @@ const hora = moment.tz('America/Sao_Paulo').format('HH:mm:ss')
 const data = moment.tz('America/Sao_Paulo').format('DD/MM/YY')
 const sleep = async (ms) => {
 return new Promise(resolve => setTimeout(resolve, ms))}
+
+// 𝐏𝐢𝐧𝐠 𝐃𝐨 𝐁𝐨𝐭
+
+function kyun(seconds){
+function pad(s){
+return (s < 10 ? '0' : '') + s;
+}
+var hours = Math.floor(seconds / (60*60));
+var minutes = Math.floor(seconds % (60*60) / 60);
+var seconds = Math.floor(seconds % 60);
+return `${pad(hours)} Horas ${pad(minutes)} Minutos ${pad(seconds)} Segundos`
+}
 
 // 𝐂𝐨𝐧𝐞𝐜𝐱𝐚𝐨 𝐃𝐨 𝐁𝐨𝐭
 
@@ -317,82 +327,76 @@ client.sendMessage(id, buttonMessage, {quoted: vr})
 
 const menu = `
 ${lermais}
-╭─────────────┓
+┏╼╾╼╾╼╾╼╾╼╾╼╾╼┓
+╽
+╠〢 ${nomeBot}
+╿
+┗╼╾╼╾╼╾╼╾╼╾╼╾┓
+╠〢 Bot Em Versao Beta!
+┏╼╾╼╾╼╾╼╾╼╾╼╾┛
 │
-╠══🥂 ${nomeBot} 🥂
-│
-┗────────────┓
-︱❗Bot Em Versao Beta!❗
-┏────────────┛
-│
-┗─────────┓
-┌─────────╩──┓
-│⚡MENUS DO BOT⚡
-╠────────────┛
-│
-│${prefix}Menulist
-│${prefix}Menugrup
-│
-┗─────────┓
-┌─────────╩──┓
-│⚡PESQUISAR/BAIXAR⚡
-╠────────────┛
-│
-│${prefix}Celular [ J7 Prime ]
-│${prefix}tiktok [ LINK ]
-│${prefix}Play
-│${prefix}Play2
-│${prefix}Ytsearch
-│
-┗─────────┓
-┌─────────╩──┓
-│⚡STICKERS⚡
-╠────────────┛
-│
-│${prefix}Sticker
-│${prefix}Fsticker
-│${prefix}Toimg
-│
-┗─────────┓
-┌─────────╩──┓
-│⚡JOGOS⚡
-╠────────────┛
-│
+┗╼╾╼╾╼╾╼╾┓
+┏╼╾╼╾╼╾╼╾╩╼╾╼┓
+╠〢 MENUS DO BOT
+╠╼╾╼╾╼╾╼╾╼╾╼╾┛
+╿
+╽${prefix}Menulist
+╿${prefix}Menugrup
+╽
+┗╼╾╼╾╼╾╼╾┓
+┏╼╾╼╾╼╾╼╾╩╼╾╼┓
+╠〢 PESQUISAR/BAIXAR
+╠╼╾╼╾╼╾╼╾╼╾╼╾┛
+╿
+╽${prefix}Play
+╿${prefix}Ytsearch
+╽
+┗╼╾╼╾╼╾╼╾┓
+┏╼╾╼╾╼╾╼╾╩╼╾╼┓
+╠〢 STICKERS
+╠╼╾╼╾╼╾╼╾╼╾╼╾┛
+╽
+╿${prefix}Sticker
+╽${prefix}Fsticker
+╿${prefix}Toimg
+╽
+┗╼╾╼╾╼╾╼╾┓
+┏╼╾╼╾╼╾╼╾╩╼╾╼┓
+╠〢 JOGOS
+╠╼╾╼╾╼╾╼╾╼╾╼╾┛
+╿
 │${prefix}Ppt
-│
-┗─────────┓
-┌─────────╩──┓
-│⚡OUTROS/CMDS⚡
-╠────────────┛
-│
-│${prefix}Dono
-│${prefix}Ping
-│${prefix}Fazernick
-│${prefix}Imgpralink
-│
-┗────────────┛
+╽
+┗╼╾╼╾╼╾╼╾┓
+┏╼╾╼╾╼╾╼╾╩╼╾╼┓
+╠〢 OUTROS/CMDS
+╠╼╾╼╾╼╾╼╾╼╾╼╾┛
+╿
+╽${prefix}Dono
+╿${prefix}Ping
+╽${prefix}Imgpralink
+┗╼╾╼╾╼╾╼╾╼╾╼╾┛
 `
 
 const menugrup = `
 ${lermais}
-╭─────────────┓
+┏╼╾╼╾╼╾╼╾╼╾╼╾╼┓
+╽
+╠〢 ${nomeBot}
+╿
+┗╼╾╼╾╼╾╼╾╼╾╼╾┓
+╠〢 Bot Em Versao Beta!
+┏╼╾╼╾╼╾╼╾╼╾╼╾┛
 │
-╠══🥂 ${nomeBot} 🥂
-│
-┗────────────┓
-︱❗Bot Em Versao Beta!❗
-┏────────────┛
-│
-┗─────────┓
-┌─────────╩──┓
+┗╼╾╼╾╼╾╼╾┓
+┏╼╾╼╾╼╾╼╾╩╼╾╼┓
 │⚡MENU DE GRUPOS⚡
-╠────────────┛
-│
-│${prefix}Link
-│${prefix}Nomegp
-│${prefix}Descricao
-│
-┗────────────┛
+╠╼╾╼╾╼╾╼╾╼╾╼╾┛
+╿
+╽${prefix}Link
+╿${prefix}Nomegp
+╽${prefix}Descricao
+┗╼╾╼╾╼╾╼╾╼╾╼╾┛
 `
 
 // 𝐂𝐨𝐧𝐬𝐭𝐬 𝐢𝐬𝐐𝐮𝐨𝐭𝐞𝐝
@@ -470,106 +474,6 @@ color('〔 GRUPO 〕','yellow'),color(groupName,'white'),'\n│\n╰────
 */
 
 switch(comando) {
-
-case 'audioplay':
-enviar(aguarde)
-blkzin = args.join(' ')
-if(!blkzin) return enviar(`*Modo Certo: ${prefix + comando} Faded*`)
-try {
-clientk = await fetchJson(`https://rest-api-by-jerfinho.herokuapp.com/yt/playmp4?&musica=${q}&apikey=jerfinho`)
-aud = await getBuffer(clientk.resultado.download)
-client.sendMessage(from,{audio: aud, mimetype: 'audio/mp4'})
-} catch {
-enviar('Eu não achei o que vocé pedio ou a api caiu!')}
-break
-
-case 'videoplay':
-enviar(aguarde)
-blkzin = args.join(' ')
-if(!blkzin) return enviar(`*Modo Certo: ${prefix + comando} Faded*`)
-try {
-blackkk = await fetchJson(`https://rest-api-by-jerfinho.herokuapp.com/yt/playmp4?&musica=${q}&apikey=jerfinho`)
-videoo = await getBuffer(blackkk.resultado.download)
-client.sendMessage(from,{video: videoo})
-} catch {
-enviar('Eu não achei o que vocé pedio ou a api caiu!')}
-break
-
-case 'play':
-enviar(aguarde)
-const playy = args[0];
-var aramas = await yts(playy);
-aramat = aramas.all 
-var tbuff = await getBuffer(aramat[0].image)
-blkzin = args.join(' ')
-if(!blkzin) return enviar(`*Modo Certo: ${prefix + comando} Faded*`)
-blackk = await fetchJson(`https://rest-api-by-jerfinho.herokuapp.com/yt/playmp4?&musica=${q}&apikey=jerfinho`)
-templateButtons = [
-
-{ quickReplyButton: { displayText: '🎵 Audio', id: `${prefix}audioplay ${blackk.resultado.título}`}},
-
-{ quickReplyButton: { displayText: '🎥 Video', id: `${prefix}videoplay ${blackk.resultado.título}`}},
-
-]
-
-templateMessage = {
-image: tbuff, thumbnail:null,
-caption: `
-❗мυѕιca pedιda por:❗
-@${sender.split('@')[0]}
-
-título: ${blackk.resultado.titulo}
-views: ${blackk.resultado.views}
-canal: ${blackk.resultado.canal}
-publicado: ${blackk.resultado.data_de_lançamento}
-
-Obs: Caso não aparessa os Botões use o .play2 como segunda opição!!
-`,
-templateButtons: templateButtons
-}
-client.sendMessage(from,templateMessage)
-break
-
-case 'tiktok':
-link = args.join(" ")
-if (!link) return reply('Ops, insira o link de um video do tiktok.')
-enviar(aguarde)
-blap = await fetchJson(`https://lzmods-api.xyz/api/medias-sociais/tiktok?link=${q}&apikey=lz`)
-blavideo = await getBuffer(blap.servidor1.video)
-client.sendMessage(from, {video: blavideo, mimetype: 'video/mp4'}, {quoted: info}).catch(e => {
-enviar('ERROR!!')
-})
-break
-
-case 'play2':
-enviar(aguarde)
-blkzin = args.join(' ')
-if(!blkzin) return enviar(`*Modo Certo: ${prefix + comando} Faded*`)
-blackk = await fetchJson(`https://rest-api-by-jerfinho.herokuapp.com/yt/playmp4?&musica=${q}&apikey=jerfinho`)
-if (args.length < 1) return enviar('Cade o txt?')
-const play2 = args[0];
-var aramas = await yts(play2);
-aramat = aramas.all 
-var tbuff = await getBuffer(aramat[0].image)
-var ytresult = '';
-ytresult = '*「YOUTUBE」*'
-aramas.all.map((video) => {
-ytresult = `
-❗мυѕιca pedιda por:❗
-@${sender.split('@')[0]}
-
-título: ${blackk.resultado.titulo}
-views: ${blackk.resultado.views}
-canal: ${blackk.resultado.canal}
-publicado: ${blackk.resultado.data_de_lançamento}
-
-Obs: Caso não aparessa os Botões use o .play2 como segunda opição!!
-`
-});
-await client.sendMessage(from,{image:tbuff,thumbnail:null, caption: ytresult}, {quoted: info})
-aud = await getBuffer(blackk.resultado.download)
-client.sendMessage(from,{audio: aud, mimetype: 'audio/mp4'})
-break
 
 case 'st': //ƈσɱαɳԃσ ϝҽιƚσ ρσɾ : JG-Bots
 case 'sticker':
@@ -752,10 +656,6 @@ enviar(resposta.erro)
 }
 break
 
-case 'menu2':
-client.sendMessage(from, {image: {url: `${logo}`}, caption: menu,})
-break
-
 case 'menu':
 sendBimgT(from, `${logo}`, menu, "Leia com Atenção...",
 [
@@ -797,56 +697,33 @@ case 'dono':
 enviar(`${nomeDono}:\nwa.me/${numeroDono}`)
 break
 
-case 'celular':
-if (!q) return enviar(`Qual celular você está procurando?`)
-teks = args.join(' ')
-tesc = await fetchJson(`https://api-yogipw.herokuapp.com/api/search/gsmarena?query=${q}`)
-const busca_celular = 
-`
-📝 Titulo: ${tesc.judul}
-❗Última atualização: ${tesc.rilis}
-📱 Tamanho do celular: ${tesc.ukuran}
-⚡ Tipo: ${tesc.type}
-🗃️ Armazenamento: ${tesc.storage}
-📴 Tela: ${tesc.display}
-📳 Polegada: ${tesc.inchi}
-🔰 Resolução da câmera: ${tesc.pixel}
-📲 Resolução do video: ${tesc.videoPixel}
-💭 Ram do celular: ${tesc.ram}
-👤 Hardware do celular: ${tesc.chipset}
-⚠️ Bateria: ${anu.batrai}
-🔋 Tipo da bateria: ${tesc.merek_batre}`
-wew = await getBuffer(tesc.thumb)
-await client.sendMessage(from, {image: wew, thumbnail:null, caption: `${busca_celular}`}, {quoted: info})
-break
-
 case 'ytsearch':
 case 'play':
 if (args.length < 1) return enviar(`Exemplo:\n${prefix + comando} Faded`)
-let list_rows = [];
+let Ytsearchh = [];
 const data = await yts(q);
 let anu = data.videos[Math.floor(Math.random() * data.videos.length)]
 for(let a of data.all) {
-list_rows.push({
-title: a.title, description: `᭡ Aᥙdι᥆: ${a.author.name}\n[⏱️]DURAÇÃO: ${a.duration}`, rowId: `${prefix}ytmp3 ${anu.url}}`
+Ytsearchh.push({
+title: a.title, description: `𝘼𝙐𝘿𝙄𝙊: ${a.author.name}\n[⏱️]DURAÇÃO: ${a.duration}`, rowId: `${prefix}ytmp3 ${anu.url}}`
 },{
-title: a.title, description: `᭡ Vιdᥱ᥆: ${a.author.name}\n[⏱️]DURAÇÃO: ${a.duration}`, rowId: `${prefix}ytmp4 ${anu.url}`
+title: a.title, description: `𝙑𝙄𝘿𝙀𝙊: ${a.author.name}\n[⏱️]DURAÇÃO: ${a.duration}`, rowId: `${prefix}ytmp4 ${anu.url}`
 })
 }
-const button = {
+const buttonYtsearch = {
 
 title: `[❗] 𝗣𝗘𝗦𝗤𝗨𝗜𝗦𝗔: ${q} [❗]`,
-description: "Clique e Escolha Uma Opção",
+description: "Clique e Escolha Uma Opção\n",
 footerText: `${nomeBot}`,
 buttonText: 'ESCOLHA AQUI',
 listType: 'SINGLE_SELECT',
 sections: [
 
-{ title: `Musicas Com A Pesquisa ${q}`,  rows: list_rows },
+{ title: `Musicas Com A Pesquisa ${q}`,  rows: Ytsearchh },
 
 ]}
-const templateList = generateWAMessageFromContent(from, proto.Message.fromObject({ "listMessage": button }), {});
-client.relayMessage(from, templateList.message, { messageId: templateList.key.id });
+const templateListYtsearch = generateWAMessageFromContent(from, proto.Message.fromObject({ "listMessage": buttonYtsearch }), {});
+client.relayMessage(from, templateListYtsearch.message, { messageId: templateListYtsearch.key.id });
 break
 
 case 'ytmp3':
@@ -855,6 +732,7 @@ let { yta } = require('./funções/yta')
 if (!q) return enviar(`Example : ${prefix + comando} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
 let quality = args[1] ? args[1] : '128kbps'
 let media = await yta(q, quality)
+enviar(aguarde)
 client.sendMessage(from, { audio: { url: media.dl_link }, mimetype: 'audio/mp4'}, {quoted: info})
 }
 break
@@ -865,7 +743,7 @@ let { ytv } = require('./funções/yta')
 if (!q) return enviar(`Example : ${prefix + comando} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`)
 let quality = args[1] ? args[1] : '360p'
 let media = await ytv(q, quality)
-
+enviar(aguarde)
 client.sendMessage(from, { video: { url: media.dl_link }, mimetype: 'video/mp4'}, {quoted: info})
 }
 break
@@ -879,54 +757,17 @@ footer: `${nomeBot}`,
 buttonText: 'Click Aqui',
 listType: 'SINGLE_SELECT',
 sections: [
-{
-title: "⇩𝐋𝐢𝐬𝐭𝐚 𝐃𝐨𝐬 𝐌𝐞𝐧𝐮𝐬 𝐀𝐛𝐚𝐢𝐱𝐨⇩",
-rows: [
-    {title: '「 𝐌𝐞𝐧𝐮 𝐏𝐫𝐢𝐧𝐜𝐢𝐩𝐚𝐥 」︎', "rowId": `${prefix}menu` },
-    {title: '「 𝐌𝐞𝐧𝐮 𝐃𝐞 𝐆𝐫𝐮𝐩𝐨𝐬 」︎', "rowId": `${prefix}menugrup` },
-]
-},
-
-{
-title: "⇩𝐌𝐮𝐬𝐢𝐜𝐚𝐬 𝐄𝐦 𝟖𝐃⇩",
-rows: [
-    {title: "「 𝐅𝐚𝐝𝐞𝐝 」", rowId: ".ytmp3 https://youtu.be/dQwJvsIjixM"},
-    {title: "「 𝐎𝐜𝐞𝐚𝐧𝐬 」", rowId: ".ytmp3 https://youtu.be/RBIQyEpQAl8"},
-    {title: "「 𝐈𝐬'𝐬 𝐘𝐨𝐮 」", rowId: ".ytmp3 https://youtu.be/fDq2yWBiD0M"},
-]
-},
-{
-title: "⇩𝐌𝐮𝐬𝐢𝐜𝐚𝐬⇩",
-rows: [
-    {title: "「 𝐏𝐚𝐧𝐝𝐚 𝐄𝐲𝐞𝐫𝐬 」", rowId: ".ytmp3 https://youtu.be/-iwYHk_SwNA"},
-]
-},
-]
-}
+{ title: "⇩𝐋𝐢𝐬𝐭𝐚 𝐃𝐨𝐬 𝐌𝐞𝐧𝐮𝐬 𝐀𝐛𝐚𝐢𝐱𝐨⇩", rows: [ {title: '「 𝐌𝐞𝐧𝐮 𝐏𝐫𝐢𝐧𝐜𝐢𝐩𝐚𝐥 」︎', "rowId": `${prefix}menu` }, {title: '「 𝐌𝐞𝐧𝐮 𝐃𝐞 𝐆𝐫𝐮𝐩𝐨𝐬 」︎', "rowId": `${prefix}menugrup` },
+]},
+{ title: "⇩𝐌𝐮𝐬𝐢𝐜𝐚𝐬 𝐄𝐦 𝟖𝐃⇩", rows: [
+{title: "「 𝐅𝐚𝐝𝐞𝐝 」", rowId: ".ytmp3 https://youtu.be/dQwJvsIjixM"},
+{title: "「 𝐎𝐜𝐞𝐚𝐧𝐬 」", rowId: ".ytmp3 https://youtu.be/RBIQyEpQAl8"},
+{title: "「 𝐈𝐬'𝐬 𝐘𝐨𝐮 」", rowId: ".ytmp3 https://youtu.be/fDq2yWBiD0M"},  ]},
+{ title: "⇩𝐌𝐮𝐬𝐢𝐜𝐚𝐬⇩", rows: [
+{ title: "「 𝐏𝐚𝐧𝐝𝐚 𝐄𝐲𝐞𝐫𝐬 」", rowId: ".ytmp3 https://youtu.be/-iwYHk_SwNA"},]},
+]}
 const templateList2 = generateWAMessageFromContent(from, proto.Message.fromObject({ "listMessage": button2 }), {});
 client.relayMessage(from, templateList2.message, { messageId: templateList2.key.id });
-break
-
-case 'nick':
-case 'gerarnick':
-case 'fazernick':
-enviar(aguarde)
-if (args.length < 1) return enviar(`Cade o Nick ._.? Exemplo: ${prefix + comando} JerfinhoPro`)
-send = await fetchJson(`https://lzmods-api.xyz/api/tools/fazernick?nick=${q}&apikey=lz`)
-var nick = `
-✨ Nicks Com o Nome [ ${q} ] Gerados Com Sucesso ✨
-    
-${send.resultado.Circled}
-${send.resultado.Fullwidth}
-${send.resultado.Parenthesized}
-${send.resultado.Squared}
-${send.resultado.Inverted}
-${send.resultado.Reversed}
-${send.resultado.Superscript}
-${send.resultado.Subscript}
-${send.resultado.Stroked}
-`
-client.sendMessage(from,{text: nick}, {quoted: info})
 break
 
 case 'toimg':
@@ -947,7 +788,7 @@ const timestamp = speed();
 uptime = process.uptime()
 const latensi = speed() - timestamp
 uptime = process.uptime()
-enviar(`┌───────────────┐\n│ Velocidade Do Bot + Informações \n│ \n│ Velocidade : ${latensi.toFixed(4)}\n│ \n┌─────────────┐\n│ Tempo Ativo : \n│ [ ${kyun(uptime)} ] \n└───────────\n│ \n│ Data : ${data}\n│ \n│ Solicitou Comando : ${pushname}\n│ \n└─────────〔 ${hora} 〕`)
+enviar(`┌───────────────┐\n│ Velocidade Do Bot + Informações \n│ \n│ Velocidade : ${latensi.toFixed(4)}\n│ \n┌─────────────┐\n│ Tempo Ativo : \n│ [ ${kyun(uptime)} ] \n└───────────\n│ \n│ Solicitou Comando : ${pushname}\n│ \n└─────────〔 ${hora} 〕`)
 break
 
 // 𝘼𝘿𝙄𝙈𝙄𝙉𝙄𝙎𝙏𝙍𝘼𝘿𝙊𝙍𝙀𝙎
