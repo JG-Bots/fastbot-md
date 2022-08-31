@@ -19,6 +19,7 @@
 # Comandos para instalar o bot!
 
 ```
+termux-change-repo
 pkg upgrade -y
 pkg update -y
 termux-setup-storage
